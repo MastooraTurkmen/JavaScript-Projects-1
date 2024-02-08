@@ -36,12 +36,12 @@ const author = document.getElementById("author")
 const job = document.getElementById("job")
 const inof = document.getElementById("info")
 
-const prevBtn = document.querySelector("prev-btn")
-const nextBtn = document.querySelector("next-btn")
-const randomBtn = document.querySelector("random-btn")
+const prevBtn = document.querySelector(".prev-btn")
+const nextBtn = document.querySelector(".next-btn")
+const randomBtn = document.querySelector(".random-btn")
 
 
-let currentContent = 3;
+let currentContent = 0;
 
 window.addEventListener('DOMContentLoaded', function () {
   showPerson(currentContent)
@@ -56,3 +56,8 @@ function showPerson(person) {
   job.textContent = items.job
   inof.textContent = items.text
 }
+
+nextBtn.addEventListener('click', function () {
+  currentContent++;
+  showPerson(currentContent)
+})
