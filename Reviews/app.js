@@ -61,3 +61,8 @@ nextBtn.addEventListener('click', function () {
   currentContent++;
   showPerson(currentContent)
 })
+
+prevBtn.addEventListener('click', function () {
+  currentContent--;
+  showPerson(currentContent)
+})
