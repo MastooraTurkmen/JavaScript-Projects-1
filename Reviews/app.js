@@ -44,9 +44,15 @@ const randomBtn = document.querySelector("random-btn")
 let currentContent = 3;
 
 window.addEventListener('DOMContentLoaded', function () {
-  const items = reviews[currentContent]
+  showPerson(currentContent)
+})
+
+// show person based on item
+
+function showPerson(person) {
+  const items = reviews[person]
   img.src = items.img
   author.textContent = items.name
   job.textContent = items.job
   inof.textContent = items.text
-})
+}
