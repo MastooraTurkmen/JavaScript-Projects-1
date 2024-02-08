@@ -29,32 +29,33 @@ const reviews = [
     text: 'Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ',
   },
 ];
-// select items
 
+// select items
 const img = document.getElementById("person-img")
 const author = document.getElementById("author")
 const job = document.getElementById("job")
-const inof = document.getElementById("info")
+const info = document.getElementById("info")
 
 const prevBtn = document.querySelector(".prev-btn")
 const nextBtn = document.querySelector(".next-btn")
 const randomBtn = document.querySelector(".random-btn")
 
-
+// set starting item
 let currentContent = 0;
 
+// load intial item
 window.addEventListener('DOMContentLoaded', function () {
-  showPerson(currentContent)
+  showPerson()
 })
 
 // show person based on item
 
-function showPerson(person) {
-  const items = reviews[person]
+function showPerson() {
+  const items = reviews[currentContent]
   img.src = items.img
   author.textContent = items.name
   job.textContent = items.job
-  inof.textContent = items.text
+  info.textContent = items.text
 }
 
 // show next person
@@ -64,7 +65,7 @@ nextBtn.addEventListener('click', function () {
   if (currentContent > reviews.length - 1) {
     currentContent = 0
   }
-  showPerson(currentContent)
+  showPerson()
 })
 
 // show perv person
@@ -74,5 +75,12 @@ prevBtn.addEventListener('click', function () {
   if (currentContent < 0) {
     currentContent = reviews.length - 1;
   }
-  showPerson(currentContent)
+  showPerson()
+})
+
+// show random person
+
+randomBtn.addEventListener('click', function () {
+  currentContent = Math.floor(Math.random() * reviews.length)
+  showPerson()
 })
