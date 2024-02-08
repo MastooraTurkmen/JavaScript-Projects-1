@@ -158,6 +158,10 @@ p {
   max-width: 1170px;
 }
 
+.current {
+  border-bottom: 2px solid var(--clr-primary-5);
+}
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
