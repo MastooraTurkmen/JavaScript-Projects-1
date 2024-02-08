@@ -39,3 +39,14 @@ const inof = document.getElementById("info")
 const prevBtn = document.querySelector("prev-btn")
 const nextBtn = document.querySelector("next-btn")
 const randomBtn = document.querySelector("random-btn")
+
+
+let currentContent = 3;
+
+window.addEventListener('DOMContentLoaded', function () {
+  const items = reviews[currentContent]
+  img.src = items.img
+  author.textContent = items.name
+  job.textContent = items.job
+  inof.textContent = items.text
+})
