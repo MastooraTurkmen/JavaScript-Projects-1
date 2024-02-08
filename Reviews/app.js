@@ -57,12 +57,22 @@ function showPerson(person) {
   inof.textContent = items.text
 }
 
+// show next person
+
 nextBtn.addEventListener('click', function () {
   currentContent++;
+  if (currentContent > reviews.length - 1) {
+    currentContent = 0
+  }
   showPerson(currentContent)
 })
 
+// show perv person
+
 prevBtn.addEventListener('click', function () {
   currentContent--;
+  if (currentContent < 0) {
+    currentContent = reviews.length - 1;
+  }
   showPerson(currentContent)
 })
