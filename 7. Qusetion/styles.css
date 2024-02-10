@@ -52,14 +52,6 @@ body {
   font-size: 0.875rem;
 }
 
-img:not(.logo) {
-  width: 100%;
-}
-
-img {
-  display: block;
-}
-
 h2 {
   font-size: 2rem;
   letter-spacing: var(--spacing);
