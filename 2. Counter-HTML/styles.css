@@ -53,6 +53,7 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
 /*
 =============== 
 Global Styles
@@ -66,6 +67,7 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-grey-10);
@@ -73,78 +75,29 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
 }
-ul {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-}
-h1,
-h2,
-h3,
-h4 {
+
+h1 {
+  font-size: 3rem;
   letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
   font-family: var(--ff-primary);
 }
-h1 {
-  font-size: 3rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.25rem;
-}
-h4 {
-  font-size: 0.875rem;
-}
-p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
-}
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
+    line-height: 1;
   }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
+
   body {
     font-size: 1rem;
   }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
 }
+
 /*  global classes */
 
-/* section */
-.section {
-  padding: 5rem 0;
-}
-
-.section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-}
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
-  }
-}
 main {
   min-height: 100vh;
   display: grid;
@@ -162,13 +115,16 @@ main {
   display: grid;
   place-items: center;
 }
+
 .container {
   text-align: center;
 }
+
 #value {
   font-size: 6rem;
   font-weight: bold;
 }
+
 .btn {
   text-transform: uppercase;
   background: transparent;
@@ -184,6 +140,7 @@ main {
   border-radius: var(--radius);
   margin: 0.5rem;
 }
+
 .btn:hover {
   color: var(--clr-white);
   background: var(--clr-black);
