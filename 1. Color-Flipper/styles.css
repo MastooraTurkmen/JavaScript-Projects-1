@@ -64,9 +64,7 @@ a {
   text-decoration: none;
 }
 
-h1,
 h2,
-h3,
 h4 {
   letter-spacing: var(--spacing);
   text-transform: capitalize;
@@ -75,16 +73,8 @@ h4 {
   font-family: var(--ff-primary);
 }
 
-h1 {
-  font-size: 3rem;
-}
-
 h2 {
   font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.25rem;
 }
 
 h4 {
@@ -97,16 +87,8 @@ p {
 }
 
 @media screen and (min-width: 800px) {
-  h1 {
-    font-size: 4rem;
-  }
-
   h2 {
     font-size: 2.5rem;
-  }
-
-  h3 {
-    font-size: 1.75rem;
   }
 
   h4 {
@@ -117,9 +99,7 @@ p {
     font-size: 1rem;
   }
 
-  h1,
   h2,
-  h3,
   h4 {
     line-height: 1;
   }
@@ -127,25 +107,8 @@ p {
 
 /*  global classes */
 
-/* section */
-.section {
-  padding: 5rem 0;
-}
-
-.section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-}
-
 .current {
   border-bottom: 2px solid var(--clr-primary-5);
-}
-
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
-  }
 }
 
 main {
