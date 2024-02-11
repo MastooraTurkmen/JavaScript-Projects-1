@@ -82,33 +82,14 @@ const menu = [
 ];
 
 const sectionCenter = document.querySelector(".section-center");
-const buttonFilterContainer = document.querySelectorAll(".filter-btn");
+const buttonContainer = document.querySelector(".btn-container")
 
 
 // load item
 
 window.addEventListener('DOMContentLoaded', function () {
-  displayMenuItem(menu)
-});
-
-// filter items
-buttonFilterContainer.forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
-    const category = e.target.dataset.id;
-
-    const menuCategory = menu.filter(function (menuItem) {
-      if (menuItem.category === category) {
-        return menuItem
-      };
-    });
-
-    if (category === "all") {
-      displayMenuItem(menu)
-    } else {
-      displayMenuItem(menuCategory)
-    }
-
-  });
+  displayMenuItem(menu);
+  displayMenuButton()
 });
 
 
@@ -133,4 +114,48 @@ function displayMenuItem(menuItem) {
   }).join('');
 
   sectionCenter.innerHTML = displayMenu
+}
+
+
+
+function displayMenuButton() {
+  const categories = menu.reduce(function (value, item) {
+    if (!value.includes(item.category)) {
+      value.push(item.category)
+    }
+    return value;
+
+  }, ['all']);
+
+  const categoriesBtn = categories.map(function (category) {
+    return `
+     <button class="filter-btn" data-id=${category} type="button">${category}</button>
+    `
+  }).join('')
+
+  buttonContainer.innerHTML = categoriesBtn;
+
+  const buttonFilterContainer = document.querySelectorAll(".filter-btn");
+
+  // filter items
+  buttonFilterContainer.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      const category = e.target.dataset.id;
+
+      const menuCategory = menu.filter(function (menuItem) {
+        if (menuItem.category === category) {
+          return menuItem
+        };
+      });
+
+      if (category === "all") {
+        displayMenuItem(menu)
+      } else {
+        displayMenuItem(menuCategory)
+      }
+
+    });
+  });
+
+
 }
