@@ -73,21 +73,35 @@ const menu = [
   },
 ];
 
-
 const sectionCenter = document.querySelector(".section-center");
 const buttonFilterContainer = document.querySelectorAll(".filter-btn");
+
+
+// load item
 
 window.addEventListener('DOMContentLoaded', function () {
   displayMenuItem(menu)
 });
 
+// filter items
+buttonFilterContainer.forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    const category = e.target.dataset.id;
 
-buttonFilterContainer.filter(function (category) {
-  category.addEventListener('click', function (e) {
-    console.log(e.target.dataset)
-  })
+    const menuCategory = menu.filter(function (menuItem) {
+      if (menuItem.category === category) {
+        return menuItem
+      };
+    });
+
+    if (category === "all") {
+      displayMenuItem(menu)
+    } else {
+      displayMenuItem(menuCategory)
+    }
+
+  });
 });
-
 
 
 function displayMenuItem(menuItem) {
