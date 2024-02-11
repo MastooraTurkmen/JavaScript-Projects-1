@@ -75,10 +75,19 @@ const menu = [
 
 
 const sectionCenter = document.querySelector(".section-center");
+const buttonFilterContainer = document.querySelectorAll(".filter-btn");
 
 window.addEventListener('DOMContentLoaded', function () {
   displayMenuItem(menu)
 });
+
+
+buttonFilterContainer.filter(function (category) {
+  category.addEventListener('click', function (e) {
+    console.log(e.target.dataset)
+  })
+});
+
 
 
 function displayMenuItem(menuItem) {
