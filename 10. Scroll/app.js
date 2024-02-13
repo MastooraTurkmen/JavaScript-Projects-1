@@ -55,7 +55,17 @@ const scrollLink = document.querySelectorAll(".scroll-link");
 
 
 scrollLink.forEach(function (link) {
-    link.addEventListener(function (event) {
+    link.addEventListener("click", function (event) {
         event.preventDefault();
+
+        const id = event.currentTarget.getAttribute("href").slice(1);
+        const element = document.getElementById(id);
+        let position = element.offsetTop;
+        window.scrollTo({
+            left: 0,
+            top: position,
+        });
+
+        linksContainer.style.height = 0
     });
 });
