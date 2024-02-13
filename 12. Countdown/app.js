@@ -27,7 +27,7 @@ const deadline = document.querySelector(".deadline");
 const deadlineFormat = document.querySelectorAll(".deadline-format");
 
 
-const futureDate = new Date(2024, 3, 25, 11, 30, 0);
+const futureDate = new Date(2024, 2, 25, 11, 30, 0);
 
 
 const year = futureDate.getFullYear();
@@ -38,4 +38,4 @@ const month = months[futureDate.getMonth()];
 const day = weekdays[futureDate.getDay()];
 
 
-giveaway.innerHTML = `iveaway ends on ${day}, ${date} ${month} ${year}, ${hours}: ${minutes} am`
+giveaway.innerHTML = `giveaway ends on ${day}, ${date} ${month} ${year}, ${hours}: ${minutes} am`
