@@ -4,11 +4,26 @@
 //offsetTop - A Number, representing the top position of the element, in pixels
 
 // ********** set date ************
-
-const date = document.querySelector(".date")
+const date = document.querySelector(".date");
 date.innerHTML = new Date().getFullYear();
 
+
 // ********** close links ************
+const navToggle = document.querySelector(".nav-toggle");
+const linksContainer = document.querySelector(".links-container");
+const links = document.querySelector(".links");
+
+navToggle.addEventListener('click', function () {
+    // linksContainer.classList.toggle('show-link');
+    const getLinksContainerHight = linksContainer.getBoundingClientRect().height
+    const getLinksHight = links.getBoundingClientRect().height;
+
+    if (getLinksContainerHight === 0) {
+        linksContainer.style.height = `${getLinksHight}px`
+    } else {
+        linksContainer.style.height = 0
+    }
+});
 
 // ********** fixed navbar ************
 
