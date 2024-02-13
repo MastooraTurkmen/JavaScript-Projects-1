@@ -32,7 +32,7 @@ const topLink = document.querySelector(".top-link");
 
 window.addEventListener("scroll", function () {
     const scrollHight = window.pageYOffset;
-    const navHight = nav.getClientRects().height;
+    const navHight = nav.getBoundingClientRect().height;
 
     if (scrollHight > navHight) {
         nav.classList.add("fixed-nav");
@@ -48,9 +48,6 @@ window.addEventListener("scroll", function () {
 });
 
 
-
-
-
-
 // ********** smooth scroll ************
 // select links
+
