@@ -21,3 +21,21 @@ const weekdays = [
   "Friday",
   "Saturday",
 ];
+
+const giveaway = document.querySelector(".giveaway");
+const deadline = document.querySelector(".deadline");
+const deadlineFormat = document.querySelectorAll(".deadline-format");
+
+
+const futureDate = new Date(2024, 3, 25, 11, 30, 0);
+
+
+const year = futureDate.getFullYear();
+const date = futureDate.getDate();
+const hours = futureDate.getHours();
+const minutes = futureDate.getMinutes();
+const month = months[futureDate.getMonth()];
+const day = weekdays[futureDate.getDay()];
+
+
+giveaway.innerHTML = `iveaway ends on ${day}, ${date} ${month} ${year}, ${hours}: ${minutes} am`
