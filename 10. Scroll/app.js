@@ -51,3 +51,11 @@ window.addEventListener("scroll", function () {
 // ********** smooth scroll ************
 // select links
 
+const scrollLink = document.querySelectorAll(".scroll-link");
+
+
+scrollLink.forEach(function (link) {
+    link.addEventListener(function (event) {
+        event.preventDefault();
+    });
+});
