@@ -22,9 +22,9 @@ function addItem(e) {
     const value = grocery.value;
     const id = new Date().getTime().toString();
 
-    if (value !== '' && editFlag === false) {
+    if (value && !editFlag) {
         console.log("add a file to list")
-    } else if (value !== '' && editFlag === true) {
+    } else if (value && editFlag) {
         console.log("editing")
     } else {
         console.log("empty list")
