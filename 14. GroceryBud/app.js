@@ -23,7 +23,40 @@ function addItem(e) {
     const id = new Date().getTime().toString();
 
     if (value && !editFlag) {
-        console.log("add a file to list")
+        const element = document.createElement("article");
+        // add class
+        element.classList.add("grocery-item");
+        // add id
+        const arrt = document.createAttribute("data-id");
+        arrt.value = id;
+
+        element.setAttribute(arrt);
+        element.innerHTML = `
+        <p class="title">${value}</p>
+            <div class="btn-container">
+              <button type="button" class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button type="button" class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+        `
+        // append child
+        list.appendChild(element);
+
+        // display alert
+        displayAlert("Item added", "success");
+
+        // show container
+        groceryContainer.classList.add("show-container")
+
+        // add to local storage
+        addToLocalStorage(id, value);
+
+        // set Back to Default
+        setBackToDefault();
+
     } else if (value && editFlag) {
         console.log("editing")
     } else {
@@ -43,7 +76,17 @@ function displayAlert(text, action) {
     }, 1000);
 }
 
+// set back to defaul
+
+function setBackToDefault() {
+    console.log("back to default");
+}
+
 // ****** FUNCTIONS **********
+
+function addToLocalStorage() {
+    console.log("add to local storage");
+}
 
 // ****** LOCAL STORAGE **********
 
