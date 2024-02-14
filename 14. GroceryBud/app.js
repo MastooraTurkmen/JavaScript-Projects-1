@@ -84,7 +84,7 @@ function setBackToDefault() {
 
 // ****** FUNCTIONS **********
 
-function addToLocalStorage() {
+function addToLocalStorage(id, value) {
     console.log("add to local storage");
 }
 
