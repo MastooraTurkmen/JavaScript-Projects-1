@@ -1,6 +1,6 @@
 // ****** SELECT ITEMS **********
 
-const alet = document.querySelector(".alert")
+const alert = document.querySelector(".alert")
 const groceryContainer = document.querySelector(".grocery-container")
 const form = document.querySelector(".grocery-form");
 const list = document.querySelector(".grocery-list");
@@ -27,9 +27,20 @@ function addItem(e) {
     } else if (value && editFlag) {
         console.log("editing")
     } else {
-        console.log("empty list")
+        displayAlert("Please, Enter a Value", "danger");
     }
+}
 
+// display alert
+function displayAlert(text, action) {
+    alert.textContent = text;
+    alert.classList.add(`alert-${action}`);
+
+    // remove alert
+    setTimeout(function () {
+        alert.textContent = "";
+        alert.classList.remove(`alert-${action}`);
+    }, 1000);
 }
 
 // ****** FUNCTIONS **********
