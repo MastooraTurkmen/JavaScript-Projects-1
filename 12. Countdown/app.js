@@ -27,7 +27,7 @@ const deadline = document.querySelector(".deadline");
 const deadlineFormat = document.querySelectorAll(".deadline-format h4");
 
 
-const futureDate = new Date(2024, 2, 25, 11, 30, 0);
+const futureDate = new Date(2024, 2, 0, 11, 30, 0);
 
 
 const year = futureDate.getFullYear();
@@ -76,8 +76,16 @@ function displayDate() {
 
   deadlineFormat.forEach(function (item, index) {
     item.innerHTML = format(values[index]);
-  })
+  });
+
+  if (t < 0) {
+    clearInterval(countdown);
+    deadline.innerHTML = `<h4 class="expired">Gaveway expired, Sorry:(</h4>`
+  }
 
 }
+
+// countdown
+let countdown = setInterval(displayDate, 1000);
 
 displayDate();
