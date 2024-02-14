@@ -30,7 +30,7 @@ function addItem(e) {
         const arrt = document.createAttribute("data-id");
         arrt.value = id;
 
-        element.setAttribute(arrt);
+        element.setAttributeNode(arrt);
         element.innerHTML = `
         <p class="title">${value}</p>
             <div class="btn-container">
@@ -41,7 +41,7 @@ function addItem(e) {
                 <i class="fas fa-trash"></i>
               </button>
             </div>
-        `
+        `;
         // append child
         list.appendChild(element);
 
