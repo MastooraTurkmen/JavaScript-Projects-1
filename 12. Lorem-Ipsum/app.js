@@ -1,3 +1,4 @@
+// lorem text
 const text = [
   `Jelly sweet roll jelly beans biscuit pie macaroon chocolate donut. Carrot cake caramels pie sweet apple pie tiramisu carrot cake. Marzipan marshmallow croissant tootsie roll lollipop. Cupcake lemon drops bear claw gummies. Jelly bear claw gummi bears lollipop cotton candy gummi bears chocolate bar cake cookie. Cupcake muffin danish muffin cookie gummies. Jelly beans tiramisu pudding. Toffee soufflé chocolate cake pastry brownie. Oat cake halvah sweet roll cotton candy croissant lollipop. Macaroon tiramisu chocolate bar candy candy carrot cake jelly sweet. Gummies croissant macaroon dessert. Chocolate cake dragée pie.`,
   `Next level tbh everyday carry, blog copper mug forage kitsch roof party pickled hammock kale chips tofu. Etsy shoreditch 8-bit microdosing, XOXO viral butcher banh mi humblebrag listicle woke bicycle rights brunch before they sold out ramps. Twee shabby chic taiyaki flannel, enamel pin venmo vape four loko. Hexagon kale chips typewriter kitsch 8-bit organic plaid small batch keffiyeh ethical banh mi narwhal echo park cronut.`,
@@ -10,28 +11,3 @@ I just told you! You've killed me! Fry! Quit doing the right thing, you jerk! Mi
   `Man braid celiac synth freegan readymade, pitchfork fam salvia waistcoat lomo bitters gentrify four loko. Pitchfork semiotics post-ironic vegan. Tofu meditation microdosing hashtag semiotics venmo. Flexitarian vape tilde taiyaki. Prism poutine farm-to-table, messenger bag vegan taxidermy tattooed sartorial squid jean shorts fixie selvage trust fund vape.`,
   `Rutters Plate Fleet boom chandler Brethren of the Coast handsomely lookout marooned brigantine knave. Buccaneer gangway jack rum loot spyglass line Jack Tar fore gaff. Gaff topmast scuttle ballast swab draught measured fer yer chains dance the hempen jig Chain Shot yardarm.`,
 ];
-
-const form = document.querySelector(".lorem-form");
-const amount = document.getElementById("amount");
-const result = document.querySelector(".lorem-text");
-
-form.addEventListener("submit", function (e) {
-  // A click on a form submit button – initiates its submission to the server.
-
-  e.preventDefault();
-
-  const value = parseInt(amount.value);
-  const random = Math.floor(Math.random() * text.length);
-
-  if (isNaN(value) || value < 0 || value > 9) {
-    result.innerHTML = `<p class="result">${text[random]}</p>`;
-  } else {
-    let tempText = text.slice(0, value);
-    tempText = tempText
-      .map(function (item) {
-        return `<p class="result">${item}</p>`;
-      })
-      .join("");
-    result.innerHTML = tempText;
-  }
-});
