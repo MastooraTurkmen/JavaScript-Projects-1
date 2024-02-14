@@ -60,9 +60,10 @@ form.addEventListener("submit", function (e) {
     let temText = text.slice(0, value);
     temText = temText.map(function (item) {
       return `<p class="result"> ${item}}</p>`
-    }).join('')
+    }).join('');
+
+    loremText.innerHTML = temText;
   }
 
-  loremText.innerHTML = temText;
 
 })
