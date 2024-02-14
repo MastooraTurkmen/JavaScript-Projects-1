@@ -53,6 +53,7 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
 /*
 =============== 
 Global Styles
@@ -66,6 +67,7 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-grey-10);
@@ -73,15 +75,19 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 img:not(.logo) {
   width: 100%;
 }
+
 img {
   display: block;
 }
@@ -96,38 +102,49 @@ h4 {
   margin-bottom: 0.75rem;
   font-family: var(--ff-primary);
 }
+
 h1 {
   font-size: 3rem;
 }
+
 h2 {
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.25rem;
 }
+
 h4 {
   font-size: 0.875rem;
 }
+
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
   }
+
   h2 {
     font-size: 2.5rem;
   }
+
   h3 {
     font-size: 1.75rem;
   }
+
   h4 {
     font-size: 1rem;
   }
+
   body {
     font-size: 1rem;
   }
+
   h1,
   h2,
   h3,
@@ -135,6 +152,7 @@ p {
     line-height: 1;
   }
 }
+
 /*  global classes */
 
 .btn {
@@ -151,10 +169,12 @@ p {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
 }
+
 .btn:hover {
   color: var(--clr-white);
   background: var(--clr-black);
 }
+
 /* section */
 .section {
   padding: 5rem 0;
@@ -166,16 +186,19 @@ p {
   max-width: 35rem;
   margin-top: 8rem;
 }
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
   }
 }
+
 main {
   min-height: 100vh;
   display: grid;
   place-items: center;
 }
+
 /*
 =============== 
 Grocery List
@@ -188,9 +211,11 @@ Grocery List
   transition: var(--transition);
   padding: 2rem;
 }
+
 .section-center:hover {
   box-shadow: var(--dark-shadow);
 }
+
 .alert {
   margin-bottom: 1rem;
   height: 1.25rem;
@@ -202,23 +227,28 @@ Grocery List
   letter-spacing: var(--spacing);
   text-transform: capitalize;
 }
+
 .alert-danger {
   color: #721c24;
   background: #f8d7da;
 }
+
 .alert-success {
   color: #155724;
   background: #d4edda;
 }
+
 .grocery-form h3 {
   color: var(--clr-primary-1);
   margin-bottom: 1.5rem;
   text-align: center;
 }
+
 .form-control {
   display: flex;
   justify-content: center;
 }
+
 #grocery {
   padding: 0.25rem;
   padding-left: 1rem;
@@ -230,10 +260,12 @@ Grocery List
   flex: 1 0 auto;
   color: var(--clr-grey-5);
 }
+
 #grocery::placeholder {
   font-family: var(--ff-secondary);
   color: var(--clr-grey-5);
 }
+
 .submit-btn {
   background: var(--clr-primary-8);
   border-color: transparent;
@@ -250,6 +282,7 @@ Grocery List
   transition: var(--transition);
   font-size: 0.85rem;
 }
+
 .submit-btn:hover {
   background: var(--clr-primary-5);
   color: var(--clr-white);
@@ -260,9 +293,11 @@ Grocery List
   transition: var(--transition);
   visibility: hidden;
 }
+
 .show-container {
   visibility: visible;
 }
+
 .grocery-item {
   display: flex;
   align-items: center;
@@ -273,19 +308,23 @@ Grocery List
   border-radius: var(--radius);
   text-transform: capitalize;
 }
+
 .grocery-item:hover {
   color: var(--clr-grey-5);
   background: var(--clr-grey-10);
 }
+
 .grocery-item:hover .title {
   color: var(--clr-grey-5);
 }
+
 .title {
   margin-bottom: 0;
   color: var(--clr-grey-1);
   letter-spacing: 2px;
   transition: var(--transition);
 }
+
 .edit-btn,
 .delete-btn {
   background: transparent;
@@ -295,18 +334,23 @@ Grocery List
   margin: 0 0.15rem;
   transition: var(--transition);
 }
+
 .edit-btn {
   color: var(--clr-green-light);
 }
+
 .edit-btn:hover {
   color: var(--clr-green-dark);
 }
+
 .delete-btn {
   color: var(--clr-red-light);
 }
+
 .delete-btn:hover {
   color: var(--clr-red-dark);
 }
+
 .clear-btn {
   text-transform: capitalize;
   width: 10rem;
@@ -323,6 +367,7 @@ Grocery List
   transition: var(--transition);
   margin-top: 1.25rem;
 }
+
 .clear-btn:hover {
   color: var(--clr-red-dark);
 }
