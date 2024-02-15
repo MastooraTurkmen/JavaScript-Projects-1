@@ -43,6 +43,13 @@ function addItem(e) {
               </button>
             </div>
         `;
+        const deleteBtn = document.querySelector(".delete-btn");
+        const editBtn = document.querySelector(".edit-btn");
+
+        deleteBtn.addEventListener('click', deleteItem);
+        editBtn.addEventListener('click', editItem);
+
+
         // append child
         list.appendChild(element);
 
@@ -91,6 +98,18 @@ function removeItem() {
     displayAlert("empty container", "danger");
     setBackToDefault();
 
+}
+
+// delete Item
+
+function deleteItem() {
+    console.log("delete")
+}
+
+// edite Item
+
+function editItem() {
+    console.log("edite")
 }
 
 // set back to defaul
