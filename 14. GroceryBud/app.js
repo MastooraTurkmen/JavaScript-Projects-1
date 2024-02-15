@@ -102,8 +102,20 @@ function removeItem() {
 
 // delete Item
 
-function deleteItem() {
-    console.log("delete")
+function deleteItem(e) {
+    const element = e.currentTarget.parentElement.parentElement;
+    const id = element.dataset.id;
+    list.removeChild(element);
+
+    if (list.classList.length === 0) {
+        groceryContainer.classList.remove("show-container")
+    }
+
+    displayAlert("Item removed", "danger")
+    setBackToDefault();
+
+    // remove from local storage
+    // removeLocalStorage(id);
 }
 
 // edite Item
