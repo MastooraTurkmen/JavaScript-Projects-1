@@ -79,7 +79,10 @@ function displayAlert(text, action) {
 // set back to defaul
 
 function setBackToDefault() {
-    console.log("back to default");
+    grocery.value = "";
+    editFlag = false;
+    submitBtn.textContent = "submit";
+    editID = "";
 }
 
 // ****** FUNCTIONS **********
