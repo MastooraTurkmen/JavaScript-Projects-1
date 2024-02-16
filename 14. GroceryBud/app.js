@@ -158,4 +158,5 @@ function addToLocalStorage(id, value) {
 function removeLocalStorage(id){}
 
 
+function editLocalStorage(id, value) {}
 // ****** SETUP ITEMS **********
